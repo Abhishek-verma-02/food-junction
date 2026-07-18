@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>My Orders</h2>
+
+<hr>
+
+{% if orders %}
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>Customer</th>
+
+<th>Total</th>
+
+<th>Payment</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for order in orders %}
+
+<tr>
+
+<td>{{ order.customer_name }}</td>
+
+<td>₹{{ order.total }}</td>
+
+<td>{{ order.payment_method }}</td>
+
+<td>{{ order.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% else %}
+
+<div class="alert alert-warning">
+
+No Orders Found.
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>🛒 My Cart</h2>
+
+<hr>
+
+{% if items %}
+
+<table class="table table-bordered align-middle">
+
+<thead>
+
+<tr>
+
+<th>Food</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for item in items %}
+
+<tr>
+
+<td>{{ item.name }}</td>
+
+<td>₹{{ item.price }}</td>
+
+<td>
+
+<a href="{{ url_for('cart.decrease', cart_id=item._id) }}"
+class="btn btn-sm btn-danger">
+
+-
+
+</a>
+
+<span class="mx-3">
+
+{{ item.quantity }}
+
+</span>
+
+<a href="{{ url_for('cart.increase', cart_id=item._id) }}"
+class="btn btn-sm btn-success">
+
++
+
+</a>
+
+</td>
+
+<td>
+
+₹{{ item.price * item.quantity }}
+
+</td>
+
+<td>
+
+<a href="{{ url_for('cart.remove', cart_id=item._id) }}"
+class="btn btn-danger">
+
+🗑 Remove
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<h3 class="text-end">
+
+Grand Total : ₹{{ total }}
+
+</h3>
+
+<a href="/checkout"
+class="btn btn-success float-end">
+
+Proceed to Checkout
+
+</a>
+
+{% else %}
+
+<div class="alert alert-warning">
+
+Your cart is empty.
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

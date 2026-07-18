@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-dark text-white">
+            <h3>Add Food</h3>
+        </div>
+
+        <div class="card-body">
+
+            <form method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label">Food Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+
+                    <select
+                        name="category"
+                        class="form-control"
+                        required>
+
+                        <option value="">Select Category</option>
+                        <option>Pizza</option>
+                        <option>Burger</option>
+                        <option>Chinese</option>
+                        <option>Drinks</option>
+                        <option>Dessert</option>
+
+                    </select>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Price (₹)</label>
+
+                    <input
+                        type="number"
+                        name="price"
+                        class="form-control"
+                        required>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Image URL</label>
+
+                    <input
+                        type="text"
+                        name="image"
+                        class="form-control"
+                        placeholder="https://example.com/pizza.jpg"
+                        required>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Description</label>
+
+                    <textarea
+                        name="description"
+                        rows="4"
+                        class="form-control"
+                        required></textarea>
+
+                </div>
+
+                <button class="btn btn-success">
+                    Add Food
+                </button>
+
+                <a href="/admin/foods"
+                   class="btn btn-secondary">
+
+                    Cancel
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

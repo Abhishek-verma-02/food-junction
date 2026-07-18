@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between mb-3">
+        <h2>Manage Orders</h2>
+
+        <a href="/admin" class="btn btn-secondary">
+            Dashboard
+        </a>
+    </div>
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-dark">
+
+        <tr>
+
+            <th>Customer</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Total</th>
+            <th>Payment</th>
+            <th>Status</th>
+            <th>Action</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% if orders %}
+
+        {% for order in orders %}
+
+        <tr>
+
+            <td>{{ order.customer_name }}</td>
+
+            <td>{{ order.phone }}</td>
+
+            <td>{{ order.address }}</td>
+
+            <td>₹{{ order.total }}</td>
+
+            <td>{{ order.payment_method }}</td>
+
+            <td>
+
+                <span class="badge bg-info">
+
+                    {{ order.status }}
+
+                </span>
+
+            </td>
+
+            <td>
+
+                <a href="/admin/order/{{ order._id }}/Preparing"
+                   class="btn btn-warning btn-sm">
+
+                    Preparing
+
+                </a>
+
+                <a href="/admin/order/{{ order._id }}/Delivered"
+                   class="btn btn-success btn-sm">
+
+                    Delivered
+
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        {% else %}
+
+        <tr>
+
+            <td colspan="7" class="text-center">
+
+                No Orders Found
+
+            </td>
+
+        </tr>
+
+        {% endif %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

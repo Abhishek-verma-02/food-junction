@@ -1,0 +1,270 @@
+body{
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:#f5f5f5;
+
+}
+
+.navbar{
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+footer{
+
+margin-top:100px;
+
+}
+
+.food-card{
+
+border-radius:15px;
+
+transition:.3s;
+
+overflow:hidden;
+
+}
+
+.food-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.food-card img{
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.btn-warning{
+
+font-weight:bold;
+
+}
+/* ===========================
+   CUSTOMER REVIEWS
+=========================== */
+
+.review-card{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:20px;
+    background:#fff;
+    transition:.3s;
+    height:100%;
+}
+
+.review-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.review-card h5{
+    font-weight:bold;
+    color:#222;
+}
+
+.review-card p{
+    color:#666;
+    margin-bottom:8px;
+}
+
+.review-card .stars{
+    color:#f4b400;
+    font-size:20px;
+}
+
+
+
+/* ===========================
+   ACHIEVEMENTS
+=========================== */
+
+.achievement-card{
+    border:none;
+    border-radius:12px;
+    background:#fff8e7;
+    padding:30px 20px;
+    transition:.3s;
+    text-align:center;
+}
+
+.achievement-card:hover{
+    transform:scale(1.04);
+    box-shadow:0 10px 18px rgba(0,0,0,.15);
+}
+
+.achievement-card h1{
+    font-size:45px;
+    font-weight:bold;
+    color:#ff9800;
+}
+
+.achievement-card p{
+    font-size:18px;
+    font-weight:600;
+    color:#444;
+}
+
+
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.choose-box{
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    background:#fff;
+    transition:.3s;
+    height:100%;
+}
+
+.choose-box:hover{
+    background:#fff8e1;
+    transform:translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,.15);
+}
+
+.choose-box h1{
+    font-size:55px;
+}
+
+.choose-box h5{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.choose-box p{
+    color:#666;
+}
+
+
+
+/* ===========================
+   SECTION HEADINGS
+=========================== */
+
+.section-title{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:35px;
+    color:#222;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#ff9800;
+    display:block;
+    margin:10px auto;
+    border-radius:5px;
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#222;
+    color:white;
+    padding:45px 0 20px;
+    margin-top:60px;
+}
+
+.footer h4{
+    color:#ffc107;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#ddd;
+    margin-bottom:8px;
+}
+
+.footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#ffc107;
+}
+
+.footer hr{
+    border-color:#555;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#bbb;
+    margin-top:15px;
+    font-size:15px;
+}
+/* =======================
+        FOOTER
+========================== */
+
+.footer{
+    background:#222;
+    color:#fff;
+    margin-top:70px;
+    padding:50px 0 20px;
+}
+
+.footer-logo{
+    color:#ffc107;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.footer h4{
+    color:#ffc107;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.footer p{
+    color:#d8d8d8;
+    line-height:28px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ffc107;
+    padding-left:6px;
+}
+
+.footer hr{
+    border-color:#555;
+}
+
+.footer .text-center{
+    color:#ccc;
+    font-size:15px;
+}

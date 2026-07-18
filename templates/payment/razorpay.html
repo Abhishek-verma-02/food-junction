@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Razorpay Payment</title>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center;margin-top:100px;">
+    Redirecting to Razorpay...
+</h2>
+
+<script>
+
+var options = {
+
+    key: "{{ key_id }}",
+
+    amount: "{{ payment.amount }}",
+
+    currency: "INR",
+
+    name: "FOOD JUNCTION",
+
+    description: "Food Order",
+
+    order_id: "{{ payment.id }}",
+
+    handler: function (response) {
+
+        const form = document.createElement("form");
+
+        form.method = "POST";
+
+        form.action = "/payment-success";
+
+        const payment = document.createElement("input");
+        payment.type = "hidden";
+        payment.name = "razorpay_payment_id";
+        payment.value = response.razorpay_payment_id;
+
+        form.appendChild(payment);
+
+        document.body.appendChild(form);
+
+        form.submit();
+    },
+
+    modal: {
+
+        ondismiss: function(){
+
+            alert("Payment Cancelled");
+
+            window.location.href="/checkout";
+
+        }
+
+    },
+
+    theme: {
+
+        color:"#f4b400"
+
+    }
+
+};
+
+var rzp = new Razorpay(options);
+
+window.onload = function(){
+
+    rzp.open();
+
+};
+
+</script>
+
+</body>
+
+</html>

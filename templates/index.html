@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<section class="bg-warning py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-4 fw-bold">
+Fresh & Delicious Food
+</h1>
+
+<p class="lead">
+Order your favourite food online from Food Junction.
+</p>
+
+<a href="#foods" class="btn btn-dark btn-lg">
+Explore Menu
+</a>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img
+src="{{ url_for('static', filename='images/hero.png') }}"
+class="img-fluid"
+alt="Hero Image">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Categories -->
+
+<section class="container mt-5">
+
+<h2 class="section-title">
+Food Categories
+</h2>
+
+<div class="row">
+
+{% for category in categories %}
+
+{% include "components/category_card.html" %}
+
+{% endfor %}
+
+</div>
+
+</section>
+
+
+<!-- Popular Foods -->
+
+<section id="foods" class="container mt-5">
+
+<h2 class="section-title">
+Popular Foods
+</h2>
+
+<div class="row">
+
+{% for food in foods %}
+
+{% include "components/food_card.html" %}
+
+{% endfor %}
+
+</div>
+
+</section>
+
+
+<!-- Reviews -->
+
+<section class="container mt-5">
+
+<h2 class="section-title">
+⭐ What Our Customers Say
+</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-3">
+
+<div class="review-card">
+
+<h5>Rahul Sharma</h5>
+
+<p class="stars">★★★★★</p>
+
+<p>
+The food arrived on time and tasted amazing.
+Highly recommended!
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="review-card">
+
+<h5>Priya Singh</h5>
+
+<p class="stars">★★★★☆</p>
+
+<p>
+Excellent taste and very easy ordering process.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-3">
+
+<div class="review-card">
+
+<h5>Aman Verma</h5>
+
+<p class="stars">★★★★★</p>
+
+<p>
+Best food ordering website I've ever used.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Achievements -->
+
+<section class="container mt-5">
+
+<h2 class="section-title">
+📊 Our Achievements
+</h2>
+
+<div class="row">
+
+<div class="col-md-3 mb-3">
+
+<div class="achievement-card">
+
+<h1>500+</h1>
+
+<p>Happy Customers</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="achievement-card">
+
+<h1>1200+</h1>
+
+<p>Orders Delivered</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="achievement-card">
+
+<h1>100+</h1>
+
+<p>Food Items</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="achievement-card">
+
+<h1>4.8★</h1>
+
+<p>Average Rating</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Why Choose Us -->
+
+<section class="container mt-5">
+
+<h2 class="section-title">
+🍔 Why Choose Food Junction?
+</h2>
+
+<div class="row">
+
+<div class="col-md-3 mb-3">
+
+<div class="choose-box">
+
+<h1>🍔</h1>
+
+<h5>Fresh Food</h5>
+
+<p>
+Prepared using fresh ingredients every day.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="choose-box">
+
+<h1>🚚</h1>
+
+<h5>Fast Delivery</h5>
+
+<p>
+Quick and reliable doorstep delivery.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="choose-box">
+
+<h1>💳</h1>
+
+<h5>Secure Payment</h5>
+
+<p>
+Pay securely using Razorpay or Cash on Delivery.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<div class="choose-box">
+
+<h1>⭐</h1>
+
+<h5>Best Quality</h5>
+
+<p>
+Quality food served with love and care.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section class="container mt-5 mb-5">
+
+<h2 class="section-title">
+📞 Contact Us
+</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow-sm text-center">
+
+<h4>📍 Address</h4>
+
+<p>
+Lucknow, Uttar Pradesh
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow-sm text-center">
+
+<h4>📞 Phone</h4>
+
+<p>
++91 1234****89
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card p-4 shadow-sm text-center">
+
+<h4>📧 Email</h4>
+
+<p>
+support@foodjunction.com
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}
