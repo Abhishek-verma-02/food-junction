@@ -94,6 +94,7 @@ fonttools @ file:///C:/miniconda3/conda-bld/fonttools_1759754890124/work
 frozendict @ file:///C:/miniconda3/conda-bld/frozendict_1761750728192/work
 frozenlist @ file:///C:/miniconda3/conda-bld/frozenlist_1761062034652/work
 fsspec @ file:///C:/miniconda3/conda-bld/fsspec_1762432453760/work
+git-filter-repo==2.47.0
 gitdb @ file:///C:/b/abs_1bkmriimss/croot/gitdb_1753362133190/work
 GitPython @ file:///C:/miniconda3/conda-bld/gitpython_1761291338863/work
 gmpy2 @ file:///C:/b/abs_d8ki0o0h97/croot/gmpy2_1738085498525/work
